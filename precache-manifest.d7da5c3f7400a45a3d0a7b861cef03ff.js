@@ -484,7 +484,7 @@ self.__precacheManifest = [
     "url": "/weddingPlannerSite/static/media/star.47e161fb.jpg"
   },
   {
-    "revision": "21708930613c700718574140f47b4789",
+    "revision": "7f735d48078e47d570a2d810dd7bfde9",
     "url": "/weddingPlannerSite/index.html"
   }
 ];
