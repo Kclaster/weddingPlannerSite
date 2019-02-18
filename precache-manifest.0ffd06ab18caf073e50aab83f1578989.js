@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/weddingPlannerSite/static/media/eighteen.dbc89127.jpg"
   },
   {
-    "revision": "01ac751da4e14da3b810",
+    "revision": "6bf2e07a45ba28e36c96",
     "url": "/weddingPlannerSite/static/css/main.568d2d7c.chunk.css"
   },
   {
@@ -244,8 +244,8 @@ self.__precacheManifest = [
     "url": "/weddingPlannerSite/static/media/seventeen.fa2e3591.jpg"
   },
   {
-    "revision": "01ac751da4e14da3b810",
-    "url": "/weddingPlannerSite/static/js/main.01ac751d.chunk.js"
+    "revision": "6bf2e07a45ba28e36c96",
+    "url": "/weddingPlannerSite/static/js/main.6bf2e07a.chunk.js"
   },
   {
     "revision": "6e4a843436a5e6b837ae5b571b5ca03e",
@@ -484,7 +484,7 @@ self.__precacheManifest = [
     "url": "/weddingPlannerSite/static/media/star.47e161fb.jpg"
   },
   {
-    "revision": "b063bb5426daa42588d0469274026f88",
+    "revision": "21708930613c700718574140f47b4789",
     "url": "/weddingPlannerSite/index.html"
   }
 ];
