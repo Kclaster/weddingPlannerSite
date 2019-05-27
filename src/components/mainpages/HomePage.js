@@ -8,10 +8,10 @@ import ScrollingPics from '../ScrollingPics';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import LoadingPage from '../mainpages/LoadingPage';
-import alyssaFourteen from '../../pics/Alyssa and Ryne/fourteen.jpg';
+import pic1 from '../../pics/Hannah and Ben/four.jpg';
 import { setHeight } from '../../actions';
 import four from '../../pics/Karley and Chris/four.jpg';
-import one from '../../pics/Karley and Chris/one.jpg';
+import one from '../../pics/Whitney and James/eighteen.jpg';
 
 const StyledImage = styled.img`
   padding-top: 5%;
@@ -73,7 +73,7 @@ const Body = props => {
               <ImageWrapper>
                 <h2>Service</h2>
                 <StyledLink to="/Services">
-                  <StyledImage src={alyssaFourteen} alt="celebration line" />
+                  <StyledImage src={pic1} alt="celebration line" />
                 </StyledLink>
               </ImageWrapper>
               <ImageWrapper>
