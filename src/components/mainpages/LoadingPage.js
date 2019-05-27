@@ -25,6 +25,7 @@ const LoadingIcon = styled.span`
 `;
 
 const Wrapper = styled.div`
+  opacity: 0.5;
   width: 100vw;
   height: 100vh;
   display: flex;

@@ -1,5 +1,5 @@
 // This will hold the snippets
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import Footer from '../Footer';
 import '../../styles/Body.css';
@@ -7,7 +7,7 @@ import Header from '../Header';
 import ScrollingPics from '../ScrollingPics';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
+import LoadingPage from '../mainpages/LoadingPage';
 import alyssaFourteen from '../../pics/Alyssa and Ryne/fourteen.jpg';
 import { setHeight } from '../../actions';
 import four from '../../pics/Karley and Chris/four.jpg';
@@ -27,47 +27,56 @@ const ImageWrapper = styled.div`
   padding: 0 2vw;
 `;
 
-class Body extends React.Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <ScrollingPics />
-        <div className="body-container">
-          <div className="homeImageContainer">
-            <ImageWrapper className="scalingImage-container">
-              <h2>Service</h2>
-              <Link className="scalingImage" to="/Services">
-                <StyledImage
-                  className="scale"
-                  src={alyssaFourteen}
-                  alt="celebration line"
-                />
-              </Link>
-            </ImageWrapper>
-            <ImageWrapper className="scalingImage-container">
-              <h2>Contact Me</h2>
-              <Link className="scalingImage" to="/Contact">
-                <StyledImage className="scale" src={one} alt="gazeebo" />
-              </Link>
-            </ImageWrapper>
-            <ImageWrapper className="scalingImage-container">
-              <h2>Stories</h2>
-              <Link className="scalingImage" to="/Weddings">
-                <StyledImage
-                  className="scale"
-                  src={four}
-                  alt="couple holding eachother"
-                />
-              </Link>
-            </ImageWrapper>
+const Body = props => {
+  const [isLoading, setIsLoading] = useState(false);
+  useEffect(() => {
+    setIsLoading(true);
+  }, [props.height]);
+
+  return (
+    <>
+      {isLoading ? (
+        <div>
+          <Header />
+          <ScrollingPics />
+          <div className="body-container">
+            <div className="homeImageContainer">
+              <ImageWrapper className="scalingImage-container">
+                <h2>Service</h2>
+                <Link className="scalingImage" to="/Services">
+                  <StyledImage
+                    className="scale"
+                    src={alyssaFourteen}
+                    alt="celebration line"
+                  />
+                </Link>
+              </ImageWrapper>
+              <ImageWrapper className="scalingImage-container">
+                <h2>Contact Me</h2>
+                <Link className="scalingImage" to="/Contact">
+                  <StyledImage className="scale" src={one} alt="gazeebo" />
+                </Link>
+              </ImageWrapper>
+              <ImageWrapper className="scalingImage-container">
+                <h2>Stories</h2>
+                <Link className="scalingImage" to="/Weddings">
+                  <StyledImage
+                    className="scale"
+                    src={four}
+                    alt="couple holding eachother"
+                  />
+                </Link>
+              </ImageWrapper>
+            </div>
+            <Footer />
           </div>
-          <Footer />
         </div>
-      </div>
-    );
-  }
-}
+      ) : (
+        <LoadingPage />
+      )}
+    </>
+  );
+};
 
 const mapStateToProps = state => {
   return {
