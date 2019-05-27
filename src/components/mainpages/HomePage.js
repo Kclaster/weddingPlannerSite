@@ -27,6 +27,35 @@ const ImageWrapper = styled.div`
   padding: 0 2vw;
 `;
 
+const BodyWrapper = styled.div`
+  margin: 0 0 5vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+`;
+
+const HomeImageContainer = styled.div`
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-content: space-around;
+  margin: 4vw 0;
+  z-index: 1;
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  width: 25vw;
+  @media (max-width: 650px) {
+    width: 80vw;
+  }
+`;
+
 const Body = props => {
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
@@ -39,37 +68,37 @@ const Body = props => {
         <div>
           <Header />
           <ScrollingPics />
-          <div className="body-container">
-            <div className="homeImageContainer">
-              <ImageWrapper className="scalingImage-container">
+          <BodyWrapper>
+            <HomeImageContainer>
+              <ImageWrapper>
                 <h2>Service</h2>
-                <Link className="scalingImage" to="/Services">
+                <StyledLink to="/Services">
                   <StyledImage
                     className="scale"
                     src={alyssaFourteen}
                     alt="celebration line"
                   />
-                </Link>
+                </StyledLink>
               </ImageWrapper>
-              <ImageWrapper className="scalingImage-container">
+              <ImageWrapper>
                 <h2>Contact Me</h2>
-                <Link className="scalingImage" to="/Contact">
+                <StyledLink to="/Contact">
                   <StyledImage className="scale" src={one} alt="gazeebo" />
-                </Link>
+                </StyledLink>
               </ImageWrapper>
-              <ImageWrapper className="scalingImage-container">
+              <ImageWrapper>
                 <h2>Stories</h2>
-                <Link className="scalingImage" to="/Weddings">
+                <StyledLink to="/Weddings">
                   <StyledImage
                     className="scale"
                     src={four}
                     alt="couple holding eachother"
                   />
-                </Link>
+                </StyledLink>
               </ImageWrapper>
-            </div>
+            </HomeImageContainer>
             <Footer />
-          </div>
+          </BodyWrapper>
         </div>
       ) : (
         <LoadingPage />
