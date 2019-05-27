@@ -41,16 +41,6 @@
 }
 
 @media only screen and (max-width: 650px) {
-  .snippet-container {
-    position: relative;
-    width: 40vw;
-    display: flex;
-    border: 1px solid #535d63;
-    margin: 3vh;
-    justify-content: center;
-    align-items: center;
-  }
-
   .onHover {
     opacity: 0.75;
     position: absolute;
@@ -63,11 +53,5 @@
     height: auto;
     text-align: center;
     border: 1px solid #535d63;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  .snippet-container {
-    width: 80vw;
   }
 }

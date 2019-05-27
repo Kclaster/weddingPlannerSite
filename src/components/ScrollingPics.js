@@ -71,7 +71,6 @@ class ScrollingPics extends React.Component {
     window.addEventListener('resize', this.setHeight);
     //mess with height of scroll
     this.images = document.querySelectorAll('.scroll');
-    console.log('heeeeeeeeere', this.images);
     this.current = 0;
     setInterval(() => {
       for (let i = 0; i < this.pics.length; i++) {

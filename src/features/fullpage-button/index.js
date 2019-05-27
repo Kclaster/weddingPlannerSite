@@ -18,10 +18,20 @@ const HeaderWrapper = styled.div`
     opacity: 0.8;
     transition: opacity 0.1s ease-in;
   }
-  @media (max-width: 450px) {
-    color: white;
-    opacity: 0.6;
-    transition: opacity 0.1s ease-in;
+  @media (max-width: 650px) {
+     opacity: 0.75;
+      position: absolute;
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: white;
+      text-align: center;
+      border: 1px solid #535d63;
+      left: 0
+      right: 0
+      margin: auto;
+      height: auto;
   }
 `;
 

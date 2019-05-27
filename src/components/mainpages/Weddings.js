@@ -13,12 +13,19 @@ import robyn from '../../pics/Robyn and Kelly/star.jpg';
 import whitney from '../../pics/Whitney and James/ten.jpg';
 import cori from '../../pics/Cori and Jesse/star.jpg';
 import PageSnippets from '../PageSnippets';
+import styled from 'styled-components';
 
 const Weddings = () => {
+  const Wrapper = styled.div`
+    margin: 6vh 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  `;
   return (
-    <div>
+    <>
       <Header />
-      <div className="weddingGrid">
+      <Wrapper className="weddingGrid">
         <PageSnippets
           href="/AlyssaAndRyne"
           hoverid="alyssa"
@@ -73,9 +80,9 @@ const Weddings = () => {
           image={cori}
           title="Cori and Jesse"
         />
-      </div>
+      </Wrapper>
       <Footer />
-    </div>
+    </>
   );
 };
 
