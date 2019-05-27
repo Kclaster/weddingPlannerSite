@@ -73,27 +73,19 @@ const Body = props => {
               <ImageWrapper>
                 <h2>Service</h2>
                 <StyledLink to="/Services">
-                  <StyledImage
-                    className="scale"
-                    src={alyssaFourteen}
-                    alt="celebration line"
-                  />
+                  <StyledImage src={alyssaFourteen} alt="celebration line" />
                 </StyledLink>
               </ImageWrapper>
               <ImageWrapper>
                 <h2>Contact Me</h2>
                 <StyledLink to="/Contact">
-                  <StyledImage className="scale" src={one} alt="gazeebo" />
+                  <StyledImage src={one} alt="gazeebo" />
                 </StyledLink>
               </ImageWrapper>
               <ImageWrapper>
                 <h2>Stories</h2>
                 <StyledLink to="/Weddings">
-                  <StyledImage
-                    className="scale"
-                    src={four}
-                    alt="couple holding eachother"
-                  />
+                  <StyledImage src={four} alt="couple holding eachother" />
                 </StyledLink>
               </ImageWrapper>
             </HomeImageContainer>
