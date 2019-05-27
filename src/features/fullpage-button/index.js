@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import './style.css';
+import styles from '../../styles';
 
 const HeaderWrapper = styled.div`
   opacity: 0;
@@ -24,18 +25,29 @@ const HeaderWrapper = styled.div`
   }
 `;
 
-const Wrapper = styled.div`
-  width: 50vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin: 6vh 0;
-  border-top: 3px solid #535d63;
-  border-bottom: 3px solid #535d63;
-`;
-
 const FullpageButton = props => {
+  console.log('akuna', props.borderRight);
+  const Wrapper = styled.div`
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 6vh 0;
+    border-top: 3px solid ${styles.colors.main.dark};
+    border-bottom: 3px solid ${styles.colors.main.dark};
+    border-right: ${props.borderRight
+      ? `3px solid ${styles.colors.main.dark}`
+      : 'none'};
+    @media (max-width: 450px) {
+      border: 3px solid ${styles.colors.main.dark};
+      border-bottom: ${props.borderRight
+        ? 'none'
+        : `3px solid ${styles.colors.main.dark}`};
+      width: 80vw;
+      margin: 0;
+    }
+  `;
   return (
     <Link to={props.href}>
       <Wrapper className={`${props.borderRight}`}>
