@@ -14,7 +14,12 @@ import four from '../../pics/Karley and Chris/four.jpg';
 import one from '../../pics/Karley and Chris/one.jpg';
 
 const StyledImage = styled.img`
+  padding-top: 5%;
   width: 100%;
+  :hover {
+    transform: scale(1.05);
+    transition: transform 200ms ease-in;
+  }
 `;
 
 const ImageWrapper = styled.div`

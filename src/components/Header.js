@@ -1,18 +1,44 @@
-//Hold the header, logo, container for links
 import React from 'react';
 
 import NavBar from './navBar';
 import logo from '../pics/general/logo-grey.png';
-import './Header.css';
+import styled from 'styled-components';
+
+const StyledLink = styled.a`
+  z-index: 2;
+  margin: 4vh 0 0 2vw
+:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease-in;
+  }
+`;
+const StyledImage = styled.img`
+  height: 100%;
+  width: auto;
+
+  @media (max-width: 425px) {
+    margin: 2vh 0 0 2vw;
+  }
+`;
+const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3vh;
+  height: 20vh;
+
+  @media (max-width: 650px) {
+    margin-bottom: 15vh;
+  }
+`;
 
 const Header = () => {
   return (
-    <div className="the-top-head">
-      <a id="logo" href="/">
-        <img id="logo-pic" src={logo} alt="logo" />
-      </a>
+    <Wrapper>
+      <StyledLink href="/">
+        <StyledImage src={logo} alt="logo" />
+      </StyledLink>
       <NavBar />
-    </div>
+    </Wrapper>
   );
 };
 

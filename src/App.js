@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import LoadingPage from './components/mainpages/LoadingPage';
 import './styles/App.css';
 
 const LazyHomePageRoute = React.lazy(() =>
@@ -72,7 +73,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter basename="/weddingPlannerSite">
-        <React.Suspense fallback={<div>loading...</div>}>
+        <React.Suspense fallback={<LoadingPage />}>
           <div>
             <Route path="/" exact component={HomePage} />
 
