@@ -48,7 +48,7 @@ const BodyWrapper = styled.div`
 const TextWrapper = styled.div`
   text-align: center;
   background: white;
-  opacity: 0.7;
+  opacity: 0.8;
   border-radius: 5px;
   color: black;
   z-index: 100;
